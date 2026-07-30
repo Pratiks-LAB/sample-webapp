@@ -69,8 +69,8 @@
     <h1>Sample Web Application</h1>
 
     <p>
-        A clean and simple Java-based web application deployed on JENKINS
-        <strong>Apache Tomcat</strong> and built using <strong>Maven</strong>.
+        A clean and simple Java-based web application deployed on 
+        <strong>Apache Tomcat</strong> and built using <strong>JENKINS using Maven</strong>.
     </p>
 
     <div class="info">
