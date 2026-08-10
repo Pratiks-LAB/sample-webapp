@@ -66,7 +66,7 @@
 <body>
 
 <div class="container">
-    <h1>Sample Web Application</h1>
+    <h1>Sample Web Application Completed end to end</h1>
 
     <p>
         A clean and simple Java-based web application deployed on 
