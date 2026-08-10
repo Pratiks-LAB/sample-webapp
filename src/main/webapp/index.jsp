@@ -80,6 +80,7 @@
         <p><strong>Server:</strong> Apache Tomcat</p>
         <p><strong>Packaging:</strong> WAR</p>
         <p><strong>Articatory conigured : </strong> jFrog</p>
+        <p>Welcme gadhe</p>
     </div>
 
     <footer>
