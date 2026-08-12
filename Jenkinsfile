@@ -5,10 +5,6 @@ pipeline {
     stages {
 
         stage('Checkout') {
-            agent {
-                retries 2
-            }
-
             steps {
                 git(
                     branch: 'main',
