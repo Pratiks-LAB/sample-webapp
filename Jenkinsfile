@@ -60,7 +60,7 @@ pipeline {
                         echo "Latest WAR file: $(basename $LATEST_WAR)"
 
                         # Deploy to Tomcat
-                        sudo cp $LATEST_WAR /opt/tomcat/tomcat-11/webapps/
+                        sudo cp $LATEST_WAR /opt/tomcat/tomcat-10/webapps/
                         sudo systemctl restart tomcat
 
                         echo "Tomcat restarted with latest artifact."
