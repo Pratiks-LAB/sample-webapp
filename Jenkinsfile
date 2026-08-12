@@ -40,5 +40,20 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploy to Tomcat') {
+            steps {
+                echo "Downloading WAR from Artifactory..."
+
+                sh '''
+                    rm -f /opt/tomcat/tomcat-10/webapps/*.war
+
+                    wget -O /opt/tomcat/tomcat-10/webapps/sample-webapp.war \
+                    http://54.208.43.126:8081/artifactory/libs-snapshot-local/com/example/sample-webapp/1.0-SNAPSHOT/sample-webapp-1.0-SNAPSHOT.war
+                '''
+
+                echo "WAR deployed to Tomcat webapps."
+            }
+        }
     }
 }
