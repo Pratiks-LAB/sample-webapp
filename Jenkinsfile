@@ -50,13 +50,13 @@ pipeline {
                 ]) {
                     sh '''
                         mvn -s $MAVEN_SETTINGS org.apache.maven.plugins:maven-dependency-plugin:3.7.0:copy \
-                            -Dartifact=com.example:sample-webapp:1.2-SNAPSHOT:war \
+                            -Dartifact=com.example:sample-webapp:1.5-SNAPSHOT:war \
                             -DoutputDirectory=/tmp \
                             # -DrepoUrl=http://artifactory.company.com/artifactory/lib-snapshot-local \
                             -Dtransitive=false
 
                         # After dependency:copy
-                        LATEST_WAR=$(ls -t /tmp/sample-webapp-1.2-*.war | head -1)
+                        LATEST_WAR=$(ls -t /tmp/sample-webapp-1.5-*.war | head -1)
                         echo "Latest WAR file: $(basename $LATEST_WAR)"
 
                         # Deploy to Tomcat
