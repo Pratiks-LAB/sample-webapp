@@ -8,6 +8,7 @@ pipeline {
             agent {
                 retries 2
             }
+
             steps {
                 git(
                     branch: 'main',
@@ -18,21 +19,22 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo "Bulding war ... "
+                echo "Building WAR..."
                 sh 'mvn clean install'
             }
         }
 
         stage('Test') {
             steps {
-                echo "testing"
+                echo "Testing..."
                 sh 'mvn test'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo "deploying to artifact.. "
+                echo "Deploying to Artifactory..."
+
                 configFileProvider([
                     configFile(
                         fileId: '59eeda3c-2ee4-414f-aff8-d9c615118222',
