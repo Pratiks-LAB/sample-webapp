@@ -80,7 +80,7 @@
         <p><strong>Server:</strong> Apache Tomcat</p>
         <p><strong>Packaging:</strong> WAR</p>
         <p><strong>Articatory conigured : </strong> jFrog</p>
-        <p>Welcome to sample login page</p>
+        <p>Configured end to end pipeline job</p>
     </div>
 
     <footer>
